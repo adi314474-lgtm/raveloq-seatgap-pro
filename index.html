@@ -1,797 +1,1031 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>RAVELOQ SeatGap Pro | Car Seat Gap Organizer</title>
-
-<meta name="description" content="RAVELOQ SeatGap Pro keeps your car organized by stopping phones, coins, keys and small items from falling into the seat gap.">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f7f7f7;
-    color:#111;
-    line-height:1.6;
-}
-
-header{
-    background:#0b0b0b;
-    color:white;
-    padding:18px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:100;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:800;
-    letter-spacing:2px;
-}
-
-.logo span{
-    color:#e5b94b;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    font-size:14px;
-    transition:.2s;
-}
-
-nav a:hover{
-    color:#e5b94b;
-}
-
-.hero{
-    min-height:620px;
-    background:linear-gradient(135deg,#101010,#242424);
-    color:white;
-    display:flex;
-    align-items:center;
-    padding:70px 8%;
-    gap:50px;
-}
-
-.hero-content{
-    max-width:600px;
-}
-
-.badge{
-    display:inline-block;
-    background:#e5b94b;
-    color:#111;
-    padding:7px 14px;
-    border-radius:30px;
-    font-weight:bold;
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:58px;
-    line-height:1.05;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    color:#e5b94b;
-}
-
-.hero p{
-    color:#ddd;
-    font-size:18px;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    background:#e5b94b;
-    color:#111;
-    text-decoration:none;
-    padding:15px 28px;
-    border-radius:7px;
-    font-weight:800;
-    margin-right:10px;
-    transition:.2s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-.btn.dark{
-    background:white;
-}
-
-.product-box{
-    margin-left:auto;
-    width:380px;
-    height:380px;
-    border:1px solid #444;
-    border-radius:25px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:radial-gradient(circle,#333,#151515);
-    overflow:hidden;
-}
-
-/* PRODUCT ILLUSTRATION */
-.seatgap-product{
-    position:relative;
-    width:300px;
-    height:300px;
-}
-
-.seat{
-    position:absolute;
-    left:15px;
-    top:25px;
-    width:105px;
-    height:250px;
-    background:linear-gradient(90deg,#555,#292929);
-    border-radius:25px 12px 12px 25px;
-    box-shadow:inset -8px 0 10px rgba(0,0,0,.3);
-}
-
-.seat-line{
-    position:absolute;
-    right:15px;
-    top:25px;
-    width:3px;
-    height:195px;
-    background:#777;
-    border-radius:5px;
-}
-
-.gap{
-    position:absolute;
-    left:120px;
-    top:35px;
-    width:48px;
-    height:230px;
-    background:#050505;
-    border-radius:8px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:inset 0 0 15px rgba(0,0,0,.9);
-}
-
-.gap span{
-    width:32px;
-    height:150px;
-    border-radius:6px;
-    background:#e5b94b;
-    color:#111;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:900;
-    font-size:20px;
-    box-shadow:0 4px 15px rgba(0,0,0,.5);
-}
-
-.console{
-    position:absolute;
-    right:15px;
-    top:20px;
-    width:115px;
-    height:260px;
-    background:linear-gradient(90deg,#242424,#444);
-    border-radius:12px 25px 25px 12px;
-}
-
-.console-top{
-    position:absolute;
-    top:25px;
-    left:15px;
-    width:85px;
-    height:55px;
-    border-radius:10px;
-    background:#111;
-    border:2px solid #555;
-}
-
-.product-label{
-    position:absolute;
-    bottom:2px;
-    left:50%;
-    transform:translateX(-50%);
-    width:135px;
-    padding:7px 10px;
-    border-radius:7px;
-    background:#e5b94b;
-    color:#111;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.35);
-}
-
-.product-label strong{
-    display:block;
-    font-size:15px;
-    letter-spacing:1px;
-}
-
-.product-label small{
-    display:block;
-    font-size:9px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-section{
-    padding:75px 8%;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-title h2{
-    font-size:38px;
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:#666;
-}
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.card{
-    background:white;
-    padding:35px 25px;
-    border-radius:15px;
-    box-shadow:0 5px 25px rgba(0,0,0,.07);
-    text-align:center;
-    transition:.2s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.icon{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#666;
-}
-
-.problem{
-    background:#111;
-    color:white;
-}
-
-.problem .section-title p{
-    color:#aaa;
-}
-
-.problem-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
-
-.problem-card{
-    padding:30px;
-    border:1px solid #333;
-    border-radius:15px;
-}
-
-.problem-card h3{
-    color:#e5b94b;
-    margin-bottom:10px;
-}
-
-.offer{
-    background:#e5b94b;
-    text-align:center;
-}
-
-.offer h2{
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-.price{
-    font-size:50px;
-    font-weight:900;
-    margin:15px 0;
-}
-
-.offer p{
-    margin-bottom:25px;
-}
-
-.buy-btn{
-    display:inline-block;
-    background:#111;
-    color:white;
-    text-decoration:none;
-    padding:17px 40px;
-    border-radius:8px;
-    font-weight:bold;
-    transition:.2s;
-}
-
-.buy-btn:hover{
-    transform:translateY(-2px);
-}
-
-.faq{
-    max-width:800px;
-    margin:auto;
-}
-
-.faq-item{
-    background:white;
-    padding:22px;
-    margin-bottom:12px;
-    border-radius:10px;
-    box-shadow:0 3px 15px rgba(0,0,0,.05);
-}
-
-.faq-item h3{
-    margin-bottom:7px;
-}
-
-footer{
-    background:#080808;
-    color:#aaa;
-    text-align:center;
-    padding:35px 20px;
-}
-
-footer strong{
-    color:white;
-}
-
-@media(max-width:800px){
-
-    header{
-        padding:15px 5%;
-    }
-
-    nav{
-        display:none;
-    }
-
-    .hero{
-        flex-direction:column;
-        text-align:center;
-        padding:60px 6%;
-        gap:20px;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .product-box{
-        margin:25px 0 0;
-        width:290px;
-        height:290px;
-    }
-
-    .seatgap-product{
-        transform:scale(.82);
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .problem-grid{
-        grid-template-columns:1fr;
-    }
-
-    section{
-        padding:60px 6%;
-    }
-
-    .section-title h2{
-        font-size:32px;
-    }
-
-    .btn{
-        margin-bottom:10px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RAVELOQ SeatGap Pro | Car Seat Gap Organizer</title>
+
+    <meta
+        name="description"
+        content="RAVELOQ SeatGap Pro helps keep phones, keys, coins and small items from falling into the gap between your car seat and center console."
+    >
+
+    <style>
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f7;
+            color: #111;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background: #080808;
+            color: #fff;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #e5b94b;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #e5b94b;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 650px;
+            background:
+                radial-gradient(circle at 75% 45%, rgba(229, 185, 75, 0.12), transparent 28%),
+                linear-gradient(135deg, #0b0b0b, #242424);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 70px;
+            padding: 80px 8%;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            flex: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e5b94b;
+            color: #111;
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 13px;
+            margin-bottom: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.05;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .hero h1 span {
+            color: #e5b94b;
+        }
+
+        .hero p {
+            color: #ddd;
+            font-size: 18px;
+            max-width: 570px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #e5b94b;
+            color: #111;
+            text-decoration: none;
+            padding: 15px 28px;
+            border-radius: 7px;
+            font-weight: 900;
+            margin-right: 10px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .btn.dark {
+            background: #fff;
+            color: #111;
+        }
+
+
+        /* =========================
+           PRODUCT DISPLAY
+        ========================== */
+
+        .product-box {
+            width: 390px;
+            height: 390px;
+            flex-shrink: 0;
+            border: 1px solid #444;
+            border-radius: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background:
+                radial-gradient(circle at 50% 40%, #3b3b3b, #151515 65%);
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.35),
+                inset 0 0 30px rgba(255, 255, 255, 0.03);
+        }
+
+        .seatgap-product {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Car seat */
+
+        .seat {
+            position: absolute;
+            left: 15px;
+            top: 40px;
+            width: 105px;
+            height: 220px;
+            background: linear-gradient(135deg, #555, #252525);
+            border-radius: 30px 12px 12px 30px;
+            transform: skewY(-3deg);
+            box-shadow: inset -8px 0 15px rgba(0, 0, 0, 0.35);
+        }
+
+        .seat-line {
+            position: absolute;
+            width: 65px;
+            height: 3px;
+            background: #777;
+            top: 80px;
+            left: 20px;
+            border-radius: 10px;
+        }
+
+        /* Center gap */
+
+        .gap {
+            position: absolute;
+            left: 118px;
+            top: 50px;
+            width: 64px;
+            height: 205px;
+            border-radius: 20px;
+            background: #050505;
+            border: 2px solid #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
+            z-index: 2;
+        }
+
+        .gap span {
+            width: 48px;
+            height: 145px;
+            border-radius: 14px;
+            background:
+                linear-gradient(
+                    180deg,
+                    #f3cf67,
+                    #c99524
+                );
+            color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: 900;
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.45),
+                inset 0 0 10px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Center console */
+
+        .console {
+            position: absolute;
+            right: 10px;
+            top: 28px;
+            width: 105px;
+            height: 235px;
+            border-radius: 12px 30px 30px 12px;
+            background: linear-gradient(135deg, #2c2c2c, #555);
+            box-shadow: inset 8px 0 15px rgba(0, 0, 0, 0.35);
+        }
+
+        .console-top {
+            position: absolute;
+            top: 35px;
+            left: 18px;
+            width: 68px;
+            height: 70px;
+            border-radius: 10px;
+            background: #181818;
+            border: 1px solid #666;
+        }
+
+        .console-top::after {
+            content: "";
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 3px solid #e5b94b;
+            left: 21px;
+            top: 21px;
+        }
+
+        .product-label {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            width: 190px;
+            padding: 9px 14px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.75);
+            border: 1px solid #555;
+            z-index: 10;
+        }
+
+        .product-label strong {
+            color: #e5b94b;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        .product-label small {
+            color: #fff;
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+
+        /* =========================
+           FEATURE CARDS
+        ========================== */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+
+        /* =========================
+           PROBLEM SECTION
+        ========================== */
+
+        .problem {
+            background: #111;
+            color: #fff;
+        }
+
+        .problem .section-title p {
+            color: #aaa;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .problem-card {
+            padding: 30px;
+            border: 1px solid #333;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .problem-card h3 {
+            color: #e5b94b;
+            margin-bottom: 10px;
+        }
+
+        .problem-card p {
+            color: #ccc;
+        }
+
+
+        /* =========================
+           OFFER
+        ========================== */
+
+        .offer {
+            background: #e5b94b;
+            text-align: center;
+        }
+
+        .offer h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .offer p {
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 50px;
+            line-height: 1;
+            font-weight: 900;
+            margin: 20px 0;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            background: #111;
+            color: #fff;
+            text-decoration: none;
+            padding: 17px 40px;
+            border-radius: 8px;
+            font-weight: 900;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .buy-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+
+        /* =========================
+           FAQ
+        ========================== */
+
+        .faq {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 22px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-item h3 {
+            margin-bottom: 7px;
+        }
+
+        .faq-item p {
+            color: #666;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #080808;
+            color: #aaa;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer strong {
+            color: #fff;
+        }
+
+        footer p + p {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 12px;
+            }
+
+            .hero {
+                gap: 40px;
+                padding: 65px 6%;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .product-box {
+                width: 340px;
+                height: 340px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 6%;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .btn {
+                margin: 5px 3px;
+                padding: 14px 20px;
+                font-size: 13px;
+            }
+
+            .product-box {
+                width: 310px;
+                height: 310px;
+            }
+
+            .seatgap-product {
+                transform: scale(0.88);
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .section-title h2 {
+                font-size: 31px;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .offer h2 {
+                font-size: 34px;
+            }
+
+            .price {
+                font-size: 44px;
+            }
+        }
+
+
+        @media (max-width: 380px) {
+
+            .product-box {
+                width: 280px;
+                height: 280px;
+            }
+
+            .seatgap-product {
+                transform: scale(0.78);
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .btn {
+                display: block;
+                margin: 8px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-    <div class="logo">
-        RAVELOQ<span>®</span>
-    </div>
+    <header>
 
-    <nav>
-        <a href="#features">Features</a>
-        <a href="#why">Why Us</a>
-        <a href="#faq">FAQ</a>
-        <a href="#buy">Buy Now</a>
-    </nav>
-
-</header>
-
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <div class="badge">
-            NEW • RAVELOQ AUTOMOTIVE
+        <div class="logo">
+            RAVELOQ<span>®</span>
         </div>
 
-        <h1>
-            Meet the <span>SeatGap Pro</span>
-        </h1>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#why">Why Us</a>
+            <a href="#faq">FAQ</a>
+            <a href="#buy">Buy Now</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                NEW • RAVELOQ AUTOMOTIVE
+            </div>
+
+            <h1>
+                Meet the <span>SeatGap Pro</span>
+            </h1>
+
+            <p>
+                Stop losing your phone, keys, coins and small items
+                inside the annoying gap between your car seat and
+                center console.
+            </p>
+
+            <a href="#buy" class="btn">
+                GET YOURS NOW
+            </a>
+
+            <a href="#features" class="btn dark">
+                LEARN MORE
+            </a>
+
+        </div>
+
+
+        <!-- Product visual -->
+
+        <div class="product-box">
+
+            <div class="seatgap-product">
+
+                <div class="seat">
+                    <div class="seat-line"></div>
+                </div>
+
+                <div class="gap">
+                    <span>R</span>
+                </div>
+
+                <div class="console">
+                    <div class="console-top"></div>
+                </div>
+
+                <div class="product-label">
+                    <strong>RAVELOQ</strong>
+                    <small>SEATGAP PRO</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <section id="features">
+
+        <div class="section-title">
+
+            <h2>
+                Built For Everyday Driving
+            </h2>
+
+            <p>
+                Simple. Clean. Practical.
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="card">
+
+                <div class="icon">📱</div>
+
+                <h3>
+                    Protect Your Phone
+                </h3>
+
+                <p>
+                    Helps prevent your phone from disappearing
+                    between the car seat and center console.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🔑</div>
+
+                <h3>
+                    Keep Things Organized
+                </h3>
+
+                <p>
+                    Keep keys, coins, cards and other small
+                    essentials within easy reach.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🚗</div>
+
+                <h3>
+                    Made For Your Car
+                </h3>
+
+                <p>
+                    Designed as a convenient solution for
+                    everyday drivers and commuters.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROBLEM
+    ========================== -->
+
+    <section class="problem" id="why">
+
+        <div class="section-title">
+
+            <h2>
+                Why SeatGap Pro?
+            </h2>
+
+            <p>
+                Because the smallest gap can become the biggest headache.
+            </p>
+
+        </div>
+
+
+        <div class="problem-grid">
+
+            <div class="problem-card">
+
+                <h3>
+                    ❌ Without SeatGap Pro
+                </h3>
+
+                <p>
+                    Phones, coins, cards and keys fall into the
+                    seat gap and become difficult to retrieve.
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <h3>
+                    ✓ With SeatGap Pro
+                </h3>
+
+                <p>
+                    Create a cleaner and more organized space
+                    around your driver's and passenger's seat.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BENEFITS
+    ========================== -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>
+                Designed For Convenience
+            </h2>
+
+            <p>
+                Less searching. Less mess. More driving.
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="card">
+
+                <div class="icon">✨</div>
+
+                <h3>
+                    Clean Interior
+                </h3>
+
+                <p>
+                    Keep your car's seat area looking cleaner
+                    and more organized.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">⚡</div>
+
+                <h3>
+                    Easy To Use
+                </h3>
+
+                <p>
+                    A simple automotive accessory designed
+                    for everyday convenience.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🛡️</div>
+
+                <h3>
+                    Everyday Protection
+                </h3>
+
+                <p>
+                    Helps stop small belongings from falling
+                    into hard-to-reach areas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         OFFER / BUY
+    ========================== -->
+
+    <section class="offer" id="buy">
+
+        <h2>
+            Upgrade Your Drive
+        </h2>
 
         <p>
-            Stop losing your phone, keys, coins and small items
-            inside the annoying gap between your car seat and console.
+            Get organized with RAVELOQ SeatGap Pro.
         </p>
 
-        <a href="#buy" class="btn">
-            GET YOURS NOW
+        <div class="price">
+            $19.99
+        </div>
+
+        <p>
+            One SeatGap Pro • Easy everyday organization
+        </p>
+
+        <!-- Replace the email below with your real business email -->
+        <a
+            href="mailto:YOUR-EMAIL@example.com"
+            class="buy-btn"
+        >
+            ORDER NOW
         </a>
 
-        <a href="#features" class="btn dark">
-            LEARN MORE
-        </a>
-
-    </div>
+    </section>
 
 
-    <div class="product-box">
+    <!-- =========================
+         FAQ
+    ========================== -->
 
-        <div class="seatgap-product">
+    <section id="faq">
 
-            <div class="seat">
-                <div class="seat-line"></div>
+        <div class="section-title">
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+            <div class="faq-item">
+
+                <h3>
+                    What is SeatGap Pro?
+                </h3>
+
+                <p>
+                    SeatGap Pro is a car accessory designed to
+                    help prevent small items from falling into
+                    the gap beside your car seat.
+                </p>
+
             </div>
 
-            <div class="gap">
-                <span>R</span>
+
+            <div class="faq-item">
+
+                <h3>
+                    What can I keep there?
+                </h3>
+
+                <p>
+                    Depending on the design and vehicle,
+                    it can help organize items such as phones,
+                    cards, coins and keys.
+                </p>
+
             </div>
 
-            <div class="console">
-                <div class="console-top"></div>
-            </div>
 
-            <div class="product-label">
-                <strong>RAVELOQ</strong>
-                <small>SEATGAP PRO</small>
+            <div class="faq-item">
+
+                <h3>
+                    Is it easy to install?
+                </h3>
+
+                <p>
+                    The product is designed for simple everyday
+                    use without complicated installation.
+                </p>
+
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<section id="features">
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-    <div class="section-title">
-
-        <h2>Built For Everyday Driving</h2>
+    <footer>
 
         <p>
-            Simple. Clean. Practical.
+            © 2026 <strong>RAVELOQ</strong>. All rights reserved.
         </p>
-
-    </div>
-
-
-    <div class="features">
-
-        <div class="card">
-
-            <div class="icon">📱</div>
-
-            <h3>
-                Protect Your Phone
-            </h3>
-
-            <p>
-                Helps prevent your phone from disappearing
-                between the car seat and center console.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">🔑</div>
-
-            <h3>
-                Keep Things Organized
-            </h3>
-
-            <p>
-                Keep keys, coins, cards and other small
-                essentials within easy reach.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">🚗</div>
-
-            <h3>
-                Made For Your Car
-            </h3>
-
-            <p>
-                Designed as a convenient solution for
-                everyday drivers and commuters.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="problem" id="why">
-
-    <div class="section-title">
-
-        <h2>
-            Why SeatGap Pro?
-        </h2>
 
         <p>
-            Because the smallest gap can become the biggest headache.
+            SeatGap Pro — Keep Your Drive Organized.
         </p>
 
-    </div>
-
-
-    <div class="problem-grid">
-
-        <div class="problem-card">
-
-            <h3>
-                ❌ Without SeatGap Pro
-            </h3>
-
-            <p>
-                Phones, coins, cards and keys fall into the
-                seat gap and become difficult to retrieve.
-            </p>
-
-        </div>
-
-
-        <div class="problem-card">
-
-            <h3>
-                ✓ With SeatGap Pro
-            </h3>
-
-            <p>
-                Create a cleaner and more organized space
-                around your driver's and passenger's seat.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section>
-
-    <div class="section-title">
-
-        <h2>
-            Designed For Convenience
-        </h2>
-
-        <p>
-            Less searching. Less mess. More driving.
-        </p>
-
-    </div>
-
-
-    <div class="features">
-
-        <div class="card">
-
-            <div class="icon">✨</div>
-
-            <h3>
-                Clean Interior
-            </h3>
-
-            <p>
-                Keep your car's seat area looking cleaner
-                and more organized.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">⚡</div>
-
-            <h3>
-                Easy To Use
-            </h3>
-
-            <p>
-                A simple automotive accessory designed
-                for everyday convenience.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">🛡️</div>
-
-            <h3>
-                Everyday Protection
-            </h3>
-
-            <p>
-                Helps stop small belongings from falling
-                into hard-to-reach areas.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="offer" id="buy">
-
-    <h2>
-        Upgrade Your Drive
-    </h2>
-
-    <p>
-        Get organized with RAVELOQ SeatGap Pro.
-    </p>
-
-    <div class="price">
-        $19.99
-    </div>
-
-    <p>
-        One SeatGap Pro • Easy everyday organization
-    </p>
-
-    <a href="mailto:YOUR-EMAIL@example.com" class="buy-btn">
-        ORDER NOW
-    </a>
-
-</section>
-
-
-<section id="faq">
-
-    <div class="section-title">
-
-        <h2>
-            Frequently Asked Questions
-        </h2>
-
-    </div>
-
-
-    <div class="faq">
-
-        <div class="faq-item">
-
-            <h3>
-                What is SeatGap Pro?
-            </h3>
-
-            <p>
-                SeatGap Pro is a car accessory designed to
-                help prevent small items from falling into the
-                gap beside your car seat.
-            </p>
-
-        </div>
-
-
-        <div class="faq-item">
-
-            <h3>
-                What can I keep there?
-            </h3>
-
-            <p>
-                Depending on the design and vehicle,
-                it can help organize items such as phones,
-                cards, coins and keys.
-            </p>
-
-        </div>
-
-
-        <div class="faq-item">
-
-            <h3>
-                Is it easy to install?
-            </h3>
-
-            <p>
-                The product is designed for simple everyday
-                use without complicated installation.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<footer>
-
-    <p>
-        © 2026 <strong>RAVELOQ</strong>. All rights reserved.
-    </p>
-
-    <p>
-        SeatGap Pro — Keep Your Drive Organized.
-    </p>
-
-</footer>
+    </footer>
 
 </body>
 </html>
