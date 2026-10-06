@@ -2,764 +2,112 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="RAVELOQ SeatGap Pro - Premium car seat gap organizer. Keep your car clean, organized and distraction-free.">
-<title>RAVELOQ SeatGap Pro | Premium Car Organizer</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAVELOQ SeatGap Pro</title>
+<meta name="description" content="RAVELOQ SeatGap Pro keeps phones, keys, coins and small items from falling beside your car seat.">
+<meta name="theme-color" content="#e10600">
 
 <style>
-:root{
-  --red:#e50914;
-  --red2:#ff2633;
-  --black:#070707;
-  --dark:#111111;
-  --dark2:#181818;
-  --white:#ffffff;
-  --muted:#a7a7a7;
-  --line:#292929;
-  --card:#141414;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#080808;color:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,92%);margin:auto}
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+header{position:sticky;top:0;z-index:99;background:rgba(8,8,8,.95);border-bottom:1px solid #222}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:900;letter-spacing:2px}
+.logo span{color:#e10600}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:#bbb;font-size:14px;font-weight:bold}
+nav a:hover{color:#fff}
 
-html{
-  scroll-behavior:smooth;
-}
+.btn{display:inline-block;padding:14px 22px;border-radius:10px;font-weight:900;border:1px solid #444;transition:.2s}
+.red{background:#e10600;border-color:#e10600;color:#fff}
+.red:hover{background:#ff2119}
+.outline:hover{border-color:#e10600}
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--black);
-  color:var(--white);
-  line-height:1.6;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-.container{
-  width:min(1120px,92%);
-  margin:auto;
-}
-
-/* HEADER */
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(7,7,7,.94);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
-}
-
-.nav{
-  min-height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.logo{
-  font-size:25px;
-  font-weight:900;
-  letter-spacing:2px;
-}
-
-.logo span{
-  color:var(--red);
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:25px;
-  font-size:14px;
-  color:#ddd;
-}
-
-.nav-links a:hover{
-  color:var(--red);
-}
-
-.nav-btn{
-  background:var(--red);
-  padding:11px 18px;
-  border-radius:7px;
-  font-weight:800;
-}
-
-.nav-btn:hover{
-  background:var(--red2);
-  color:#fff!important;
-}
-
-/* HERO */
 .hero{
-  min-height:720px;
-  display:flex;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 80% 45%,rgba(229,9,20,.18),transparent 30%),
-    linear-gradient(135deg,#070707,#101010);
+padding:75px 0;
+background:radial-gradient(circle at 80% 20%,rgba(225,6,0,.2),transparent 35%)
+}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.badge{display:inline-block;color:#ff4b44;border:1px solid #333;border-radius:30px;padding:6px 12px;font-size:11px;font-weight:bold;letter-spacing:1px;margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,70px);line-height:1;letter-spacing:-3px;margin-bottom:20px}
+h1 span{color:#e10600}
+.hero p{color:#aaa;font-size:18px;max-width:560px;margin-bottom:25px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.note{color:#666;font-size:12px;margin-top:15px}
+.hero-img{border:1px solid #292929;border-radius:20px;overflow:hidden;background:#111}
+.hero-img img{width:100%;display:block}
+
+section{padding:75px 0}
+.dark{background:#0d0d0d}
+.center{text-align:center;max-width:700px;margin:0 auto 40px}
+.eyebrow{color:#e10600;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+h2{font-size:clamp(30px,4vw,45px);line-height:1.1;margin-bottom:12px}
+.center p{color:#999}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#111;border:1px solid #292929;border-radius:16px;padding:25px}
+.icon{font-size:25px;margin-bottom:12px}
+.card h3{margin-bottom:7px}
+.card p{color:#929292;font-size:14px}
+
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.compare .card h3{color:#ff4b44}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:#111;border:1px solid #292929;border-radius:16px;padding:25px}
+.num{font-size:32px;font-weight:900;color:#e10600;margin-bottom:8px}
+.step p{color:#999}
+
+.box{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.list{background:#111;border:1px solid #292929;border-radius:18px;padding:28px}
+.list div{padding:10px 0;color:#ccc}
+.list b{color:#e10600;margin-right:10px}
+
+.review{background:#111;border:1px solid #292929;border-radius:16px;padding:24px}
+.stars{color:#e10600;margin-bottom:12px}
+.review p{color:#bbb;margin-bottom:10px}
+.review small{color:#666}
+
+.offer{text-align:center}
+.offer-box{
+padding:45px 25px;
+border:1px solid #451a18;
+border-radius:22px;
+background:radial-gradient(circle at 90% 20%,rgba(225,6,0,.2),transparent 35%),#111
+}
+.price{font-size:52px;font-weight:900;margin:12px 0}
+.price small{font-size:14px;color:#777;font-weight:normal}
+.offer-box>p{color:#999;max-width:600px;margin:0 auto 25px}
+
+.faq-list{max-width:800px;margin:auto}
+details{background:#111;border:1px solid #292929;border-radius:12px;padding:17px 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:bold}
+details p{color:#999;padding-top:10px;font-size:14px}
+
+.contact{text-align:center}
+.contact p{color:#999;max-width:600px;margin:0 auto 25px}
+
+footer{border-top:1px solid #222;background:#060606;padding:30px 0}
+.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer p{color:#666;font-size:12px}
+
+.wa{
+position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;
+background:#25d366;color:#fff;display:grid;place-items:center;font-size:25px;
+z-index:100;box-shadow:0 5px 25px #000
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-  align-items:center;
-}
-
-.badge{
-  display:inline-block;
-  border:1px solid rgba(229,9,20,.5);
-  background:rgba(229,9,20,.08);
-  color:#ff6068;
-  padding:7px 12px;
-  border-radius:30px;
-  font-size:12px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  margin-bottom:22px;
-}
-
-.hero h1{
-  font-size:clamp(44px,6vw,72px);
-  line-height:1.02;
-  letter-spacing:-3px;
-  margin-bottom:22px;
-}
-
-.hero h1 span{
-  color:var(--red);
-}
-
-.hero p{
-  color:var(--muted);
-  font-size:18px;
-  max-width:550px;
-  margin-bottom:30px;
-}
-
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:13px;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:14px 22px;
-  border-radius:8px;
-  font-weight:800;
-  border:1px solid var(--line);
-  transition:.25s;
-}
-
-.btn-primary{
-  background:var(--red);
-  border-color:var(--red);
-}
-
-.btn-primary:hover{
-  background:var(--red2);
-  transform:translateY(-2px);
-}
-
-.btn-secondary{
-  background:#171717;
-}
-
-.btn-secondary:hover{
-  border-color:#555;
-  transform:translateY(-2px);
-}
-
-.trust{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  margin-top:25px;
-  color:#aaa;
-  font-size:13px;
-}
-
-/* PRODUCT VISUAL */
-.product-area{
-  min-height:440px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-}
-
-.glow{
-  width:360px;
-  height:360px;
-  border-radius:50%;
-  background:rgba(229,9,20,.12);
-  filter:blur(35px);
-  position:absolute;
-}
-
-.product-box{
-  width:330px;
-  height:330px;
-  position:relative;
-  z-index:2;
-  transform:rotate(-5deg);
-}
-
-.console{
-  position:absolute;
-  width:250px;
-  height:150px;
-  left:40px;
-  top:85px;
-  background:linear-gradient(145deg,#292929,#0d0d0d);
-  border-radius:22px;
-  box-shadow:0 25px 45px rgba(0,0,0,.7);
-  border:2px solid #353535;
-}
-
-.gap{
-  position:absolute;
-  width:38px;
-  height:122px;
-  left:106px;
-  top:14px;
-  background:#020202;
-  border-radius:12px;
-  box-shadow:inset 0 0 12px #000;
-}
-
-.organizer{
-  position:absolute;
-  width:52px;
-  height:125px;
-  left:100px;
-  top:14px;
-  background:linear-gradient(90deg,#080808,#292929,#080808);
-  border-radius:9px;
-  border:1px solid #444;
-}
-
-.organizer:after{
-  content:"R";
-  position:absolute;
-  color:var(--red);
-  font-size:25px;
-  font-weight:900;
-  left:16px;
-  top:47px;
-}
-
-.side{
-  position:absolute;
-  width:30px;
-  height:150px;
-  background:#202020;
-  border-radius:15px;
-  top:0;
-}
-
-.side.left{left:-22px}
-.side.right{right:-22px}
-
-.product-label{
-  position:absolute;
-  bottom:12px;
-  left:0;
-  right:0;
-  text-align:center;
-  font-weight:900;
-  letter-spacing:3px;
-  color:#ddd;
-}
-
-/* SECTION */
-section{
-  padding:95px 0;
-}
-
-.section-head{
-  text-align:center;
-  max-width:700px;
-  margin:0 auto 55px;
-}
-
-.section-head .small{
-  color:var(--red);
-  text-transform:uppercase;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:2px;
-  margin-bottom:10px;
-}
-
-.section-head h2{
-  font-size:clamp(32px,5vw,48px);
-  line-height:1.1;
-  margin-bottom:15px;
-}
-
-.section-head p{
-  color:var(--muted);
-}
-
-/* PROBLEM */
-.problem{
-  background:#0d0d0d;
-}
-
-.problem-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
-
-.problem-card{
-  padding:35px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:#121212;
-}
-
-.problem-card.after{
-  border-color:rgba(229,9,20,.45);
-}
-
-.problem-card h3{
-  margin-bottom:15px;
-  font-size:22px;
-}
-
-.problem-card p{
-  color:#aaa;
-}
-
-.visual{
-  height:180px;
-  margin-bottom:25px;
-  border-radius:12px;
-  background:#080808;
-  position:relative;
-  overflow:hidden;
-}
-
-.phone{
-  position:absolute;
-  width:42px;
-  height:75px;
-  border-radius:7px;
-  background:#444;
-  left:45%;
-  top:55px;
-}
-
-.coins{
-  position:absolute;
-  width:22px;
-  height:22px;
-  border-radius:50%;
-  background:#aaa;
-  left:35%;
-  top:95px;
-}
-
-.pen{
-  position:absolute;
-  width:70px;
-  height:7px;
-  background:#777;
-  transform:rotate(30deg);
-  left:55%;
-  top:75px;
-}
-
-.clean{
-  width:160px;
-  height:100px;
-  position:absolute;
-  left:50%;
-  top:40px;
-  transform:translateX(-50%);
-  border:2px solid #555;
-  border-radius:18px;
-}
-
-.clean:after{
-  content:"R";
-  position:absolute;
-  left:62px;
-  top:28px;
-  color:var(--red);
-  font-size:30px;
-  font-weight:900;
-}
-
-/* FEATURES */
-.features-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.feature{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:28px;
-  transition:.25s;
-}
-
-.feature:hover{
-  transform:translateY(-5px);
-  border-color:#444;
-}
-
-.icon{
-  width:48px;
-  height:48px;
-  display:grid;
-  place-items:center;
-  border-radius:10px;
-  background:rgba(229,9,20,.12);
-  color:var(--red);
-  font-size:22px;
-  margin-bottom:18px;
-}
-
-.feature h3{
-  margin-bottom:9px;
-}
-
-.feature p{
-  color:#999;
-  font-size:14px;
-}
-
-/* HOW */
-.how{
-  background:#0d0d0d;
-}
-
-.steps{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-
-.step{
-  text-align:center;
-  padding:30px;
-}
-
-.number{
-  width:55px;
-  height:55px;
-  display:grid;
-  place-items:center;
-  margin:0 auto 20px;
-  border-radius:50%;
-  background:var(--red);
-  font-size:20px;
-  font-weight:900;
-}
-
-.step p{
-  color:#999;
-  font-size:14px;
-  margin-top:8px;
-}
-
-/* BOX */
-.box-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-}
-
-.box-visual{
-  min-height:350px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:linear-gradient(145deg,#181818,#090909);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-}
-
-.package{
-  width:220px;
-  height:270px;
-  background:linear-gradient(145deg,#1d1d1d,#080808);
-  border:1px solid #444;
-  box-shadow:20px 25px 50px rgba(0,0,0,.5);
-  padding:28px;
-  text-align:center;
-}
-
-.package strong{
-  font-size:22px;
-  letter-spacing:2px;
-}
-
-.package .red{
-  color:var(--red);
-  font-size:30px;
-  font-weight:900;
-  margin-top:45px;
-}
-
-.box-list{
-  list-style:none;
-}
-
-.box-list li{
-  padding:14px 0;
-  border-bottom:1px solid var(--line);
-  color:#ccc;
-}
-
-.box-list li:before{
-  content:"✓";
-  color:var(--red);
-  font-weight:900;
-  margin-right:12px;
-}
-
-/* REVIEWS */
-.reviews{
-  background:#0d0d0d;
-}
-
-.review-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.review{
-  background:#141414;
-  border:1px solid var(--line);
-  padding:28px;
-  border-radius:15px;
-}
-
-.stars{
-  color:#ffbd00;
-  margin-bottom:15px;
-}
-
-.review p{
-  color:#bbb;
-  font-size:14px;
-  margin-bottom:18px;
-}
-
-.reviewer{
-  font-weight:800;
-}
-
-.verified{
-  color:#777;
-  font-size:12px;
-}
-
-/* OFFER */
-.offer{
-  padding:80px 0;
-}
-
-.offer-card{
-  background:
-    radial-gradient(circle at 90% 50%,rgba(229,9,20,.22),transparent 35%),
-    #151515;
-  border:1px solid #333;
-  border-radius:22px;
-  padding:55px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-}
-
-.offer-card h2{
-  font-size:42px;
-  line-height:1.1;
-  margin-bottom:12px;
-}
-
-.offer-card p{
-  color:#aaa;
-}
-
-.price{
-  margin:20px 0;
-  font-size:44px;
-  font-weight:900;
-}
-
-.price small{
-  font-size:15px;
-  color:#888;
-  font-weight:normal;
-}
-
-/* FAQ */
-.faq{
-  max-width:800px;
-  margin:auto;
-}
-
-details{
-  background:#141414;
-  border:1px solid var(--line);
-  border-radius:10px;
-  margin-bottom:12px;
-  overflow:hidden;
-}
-
-summary{
-  cursor:pointer;
-  padding:20px;
-  font-weight:800;
-}
-
-details p{
-  color:#999;
-  padding:0 20px 20px;
-}
-
-/* FOOTER */
-footer{
-  background:#050505;
-  border-top:1px solid var(--line);
-  padding:45px 0 25px;
-}
-
-.footer-grid{
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
-  flex-wrap:wrap;
-}
-
-.footer-text{
-  color:#777;
-  max-width:400px;
-  margin-top:10px;
-  font-size:14px;
-}
-
-.footer-links{
-  display:flex;
-  gap:20px;
-  color:#aaa;
-  font-size:14px;
-}
-
-.copyright{
-  border-top:1px solid #1c1c1c;
-  margin-top:35px;
-  padding-top:20px;
-  color:#666;
-  font-size:12px;
-  text-align:center;
-}
-
-/* MOBILE */
 @media(max-width:800px){
-
-  .nav{
-    min-height:64px;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  .nav-btn{
-    padding:9px 13px;
-    font-size:12px;
-  }
-
-  .hero{
-    min-height:auto;
-    padding:75px 0 55px;
-  }
-
-  .hero-grid{
-    grid-template-columns:1fr;
-    gap:30px;
-  }
-
-  .hero h1{
-    font-size:45px;
-    letter-spacing:-2px;
-  }
-
-  .hero p{
-    font-size:16px;
-  }
-
-  .product-area{
-    min-height:350px;
-  }
-
-  .product-box{
-    transform:scale(.85) rotate(-5deg);
-  }
-
-  section{
-    padding:70px 0;
-  }
-
-  .features-grid,
-  .steps,
-  .review-grid{
-    grid-template-columns:1fr;
-  }
-
-  .problem-grid,
-  .box-grid{
-    grid-template-columns:1fr;
-  }
-
-  .offer-card{
-    padding:35px 25px;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .offer-card h2{
-    font-size:34px;
-  }
-
-  .price{
-    font-size:38px;
-  }
-
-  .footer-grid{
-    flex-direction:column;
-  }
-
-  .footer-links{
-    flex-wrap:wrap;
-  }
+nav{display:none}
+.hero{padding:50px 0}
+.hero-grid,.compare,.box{grid-template-columns:1fr}
+.grid3,.steps{grid-template-columns:1fr}
+h1{font-size:46px}
+section{padding:60px 0}
 }
 </style>
 </head>
@@ -767,399 +115,304 @@ footer{
 <body>
 
 <header>
-  <div class="container nav">
-    <a href="#" class="logo">RAVELO<span>Q</span></a>
-
-    <nav class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#how">How It Works</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-
-    <a href="#buy" class="nav-btn">BUY NOW</a>
-  </div>
+<div class="container nav">
+<a class="logo" href="#">RAVE<span>LOQ</span></a>
+<nav>
+<a href="#features">Features</a>
+<a href="#how">How It Works</a>
+<a href="#faq">FAQ</a>
+<a href="#order" class="btn red">Buy Now</a>
+</nav>
+</div>
 </header>
 
-<main>
-
-<!-- HERO -->
 <section class="hero">
-  <div class="container hero-grid">
+<div class="container hero-grid">
 
-    <div>
-      <div class="badge">Premium Car Accessory</div>
+<div>
+<div class="badge">RAVELOQ • SEATGAP PRO</div>
 
-      <h1>
-        Small gap.<br>
-        <span>Big problems.</span><br>
-        Problem solved.
-      </h1>
+<h1>Small gap.<br><span>Big problems.</span><br>Problem solved.</h1>
 
-      <p>
-        Meet RAVELOQ SeatGap Pro — the premium seat-gap organizer
-        designed to stop your phone, keys, coins and other essentials
-        from disappearing between your car seats.
-      </p>
+<p>
+Stop your phone, keys, coins and other small essentials from disappearing
+into the gap beside your car seat.
+</p>
 
-      <div class="buttons">
-        <a href="#buy" class="btn btn-primary">Order Now →</a>
-        <a href="#how" class="btn btn-secondary">See How It Works</a>
-      </div>
+<div class="buttons">
+<a href="#order" class="btn red">Order SeatGap Pro</a>
+<a href="#features" class="btn outline">See Features</a>
+</div>
 
-      <div class="trust">
-        <span>✓ Universal Fit</span>
-        <span>✓ Easy Installation</span>
-        <span>✓ Premium Finish</span>
-      </div>
-    </div>
+<div class="note">Designed for everyday drivers • Easy to use • Clean interior look</div>
+</div>
 
-    <div class="product-area">
-      <div class="glow"></div>
+<div class="hero-img">
+<img src="raveloq-hero.png" alt="RAVELOQ SeatGap Pro">
+</div>
 
-      <div class="product-box">
-        <div class="console">
-          <div class="side left"></div>
-          <div class="side right"></div>
-          <div class="gap"></div>
-          <div class="organizer"></div>
-        </div>
-        <div class="product-label">SEATGAP PRO</div>
-      </div>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<!-- PROBLEM -->
-<section class="problem">
-  <div class="container">
+<section class="dark">
+<div class="container">
 
-    <div class="section-head">
-      <div class="small">The Problem</div>
-      <h2>That tiny gap causes big problems.</h2>
-      <p>
-        We have all dropped something between the seat and console.
-        RAVELOQ keeps your essentials where they belong.
-      </p>
-    </div>
+<div class="center">
+<div class="eyebrow">THE PROBLEM</div>
+<h2>That seat gap is annoying.</h2>
+<p>Small objects can disappear exactly where you don't want them to.</p>
+</div>
 
-    <div class="problem-grid">
+<div class="compare">
+<div class="card">
+<h3>✕ Without SeatGap Pro</h3>
+<p>Phones, keys, coins and cards can slide into the gap and become difficult to reach.</p>
+</div>
 
-      <div class="problem-card">
-        <div class="visual">
-          <div class="phone"></div>
-          <div class="coins"></div>
-          <div class="pen"></div>
-        </div>
-        <h3>Before RAVELOQ</h3>
-        <p>
-          Phones, coins, cards and keys disappear into the seat gap,
-          creating mess and distraction while driving.
-        </p>
-      </div>
+<div class="card">
+<h3>✓ With RAVELOQ</h3>
+<p>SeatGap Pro helps create a practical barrier so your everyday items stay easier to reach.</p>
+</div>
+</div>
 
-      <div class="problem-card after">
-        <div class="visual">
-          <div class="clean"></div>
-        </div>
-        <h3>After RAVELOQ</h3>
-        <p>
-          Your essentials stay organized, accessible and safely within
-          reach whenever you need them.
-        </p>
-      </div>
-
-    </div>
-  </div>
+</div>
 </section>
 
-<!-- FEATURES -->
 <section id="features">
-  <div class="container">
+<div class="container">
 
-    <div class="section-head">
-      <div class="small">Why SeatGap Pro</div>
-      <h2>Designed for everyday driving.</h2>
-      <p>
-        Simple design. Premium feel. Practical protection for your car.
-      </p>
-    </div>
+<div class="center">
+<div class="eyebrow">WHY RAVELOQ</div>
+<h2>Made for everyday driving.</h2>
+<p>Simple idea. Useful design. Less frustration.</p>
+</div>
 
-    <div class="features-grid">
+<div class="grid3">
 
-      <div class="feature">
-        <div class="icon">◆</div>
-        <h3>Premium PU Leather</h3>
-        <p>Clean, durable and premium-looking material made for daily use.</p>
-      </div>
+<div class="card">
+<div class="icon">📱</div>
+<h3>Protect Your Phone</h3>
+<p>Helps stop your phone from slipping into the seat gap.</p>
+</div>
 
-      <div class="feature">
-        <div class="icon">✓</div>
-        <h3>Perfect Fit Design</h3>
-        <p>Designed to sit neatly in the space between your seat and console.</p>
-      </div>
+<div class="card">
+<div class="icon">🔑</div>
+<h3>Keep Keys Handy</h3>
+<p>Keep small essentials closer and easier to reach.</p>
+</div>
 
-      <div class="feature">
-        <div class="icon">◎</div>
-        <h3>Universal Fit</h3>
-        <p>Suitable for most cars, SUVs and everyday vehicles.</p>
-      </div>
+<div class="card">
+<div class="icon">🚗</div>
+<h3>Cleaner Interior</h3>
+<p>Reduce loose objects around your seats.</p>
+</div>
 
-      <div class="feature">
-        <div class="icon">✦</div>
-        <h3>Clean & Stylish</h3>
-        <p>Minimal design that complements your car interior.</p>
-      </div>
+<div class="card">
+<div class="icon">⚡</div>
+<h3>Quick Setup</h3>
+<p>Designed to be simple to position and use.</p>
+</div>
 
-      <div class="feature">
-        <div class="icon">⚡</div>
-        <h3>Easy Installation</h3>
-        <p>No complicated tools or permanent modification required.</p>
-      </div>
+<div class="card">
+<div class="icon">🧼</div>
+<h3>Easy to Maintain</h3>
+<p>A practical accessory for everyday vehicle use.</p>
+</div>
 
-      <div class="feature">
-        <div class="icon">◈</div>
-        <h3>Long-Lasting Quality</h3>
-        <p>Built for repeated everyday use without sacrificing style.</p>
-      </div>
+<div class="card">
+<div class="icon">✨</div>
+<h3>Minimal Look</h3>
+<p>Designed to complement a modern car interior.</p>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="how" id="how">
-  <div class="container">
+<section id="how" class="dark">
+<div class="container">
 
-    <div class="section-head">
-      <div class="small">Simple Setup</div>
-      <h2>Install it in seconds.</h2>
-      <p>No complicated process. Just place, adjust and enjoy.</p>
-    </div>
+<div class="center">
+<div class="eyebrow">HOW IT WORKS</div>
+<h2>Three simple steps.</h2>
+</div>
 
-    <div class="steps">
+<div class="steps">
 
-      <div class="step">
-        <div class="number">1</div>
-        <h3>Place</h3>
-        <p>Position SeatGap Pro between your car seat and center console.</p>
-      </div>
+<div class="step">
+<div class="num">01</div>
+<h3>Position</h3>
+<p>Place SeatGap Pro beside the seat where the gap causes problems.</p>
+</div>
 
-      <div class="step">
-        <div class="number">2</div>
-        <h3>Adjust</h3>
-        <p>Move it into the position that gives you the best fit.</p>
-      </div>
+<div class="step">
+<div class="num">02</div>
+<h3>Secure</h3>
+<p>Adjust it into a comfortable position for your vehicle.</p>
+</div>
 
-      <div class="step">
-        <div class="number">3</div>
-        <h3>Enjoy</h3>
-        <p>Keep your everyday essentials organized and easy to reach.</p>
-      </div>
+<div class="step">
+<div class="num">03</div>
+<h3>Drive</h3>
+<p>Keep your everyday essentials within easier reach.</p>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
-<!-- BOX -->
 <section>
-  <div class="container box-grid">
+<div class="container box">
 
-    <div class="box-visual">
-      <div class="package">
-        <strong>RAVELOQ</strong>
-        <div class="red">SEATGAP<br>PRO</div>
-      </div>
-    </div>
+<div>
+<div class="eyebrow">WHAT'S INCLUDED</div>
+<h2>Everything you need to get started.</h2>
+<p style="color:#999;margin-top:15px">
+A simple solution designed for everyday vehicle use.
+</p>
+</div>
 
-    <div>
-      <div class="section-head" style="text-align:left;margin:0 0 25px;">
-        <div class="small">What's Included</div>
-        <h2>Everything you need.</h2>
-        <p>Premium essentials in one simple package.</p>
-      </div>
+<div class="list">
+<div><b>✓</b> SeatGap Pro set</div>
+<div><b>✓</b> Easy positioning</div>
+<div><b>✓</b> Practical interior organization</div>
+<div><b>✓</b> RAVELOQ branded packaging</div>
+</div>
 
-      <ul class="box-list">
-        <li>2 × RAVELOQ SeatGap Pro organizers</li>
-        <li>Premium finish</li>
-        <li>Easy installation design</li>
-        <li>Care & usage guide</li>
-        <li>Ready for everyday driving</li>
-      </ul>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<!-- REVIEWS -->
-<section class="reviews" id="reviews">
-  <div class="container">
+<section class="dark">
+<div class="container">
 
-    <div class="section-head">
-      <div class="small">Customer Feedback</div>
-      <h2>Loved by everyday drivers.</h2>
-      <p>Simple products solve everyday problems.</p>
-    </div>
+<div class="center">
+<div class="eyebrow">CUSTOMER EXPERIENCE</div>
+<h2>Built around a real everyday problem.</h2>
+<p>Add your real customer reviews after your first orders.</p>
+</div>
 
-    <div class="review-grid">
+<div class="grid3">
 
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p>
-          "Finally something that stops my phone and coins from
-          disappearing under the seat. Looks great too."
-        </p>
-        <div class="reviewer">Ahmed R.</div>
-        <div class="verified">Customer</div>
-      </div>
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>“Really useful for keeping small items from disappearing beside the seat.”</p>
+<small>Customer review placeholder</small>
+</div>
 
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p>
-          "Very simple idea but extremely useful. My car feels much
-          more organized now."
-        </p>
-        <div class="reviewer">Sarah M.</div>
-        <div class="verified">Customer</div>
-      </div>
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>“Simple product, clean look and very convenient for daily driving.”</p>
+<small>Customer review placeholder</small>
+</div>
 
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p>
-          "Easy to install and the design looks much more premium
-          than the cheap alternatives."
-        </p>
-        <div class="reviewer">John D.</div>
-        <div class="verified">Customer</div>
-      </div>
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>“Exactly the type of small car accessory I was looking for.”</p>
+<small>Customer review placeholder</small>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
-<!-- OFFER -->
-<section class="offer" id="buy">
-  <div class="container">
+<section id="order" class="offer">
+<div class="container">
 
-    <div class="offer-card">
+<div class="offer-box">
 
-      <div>
-        <div class="badge">Launch Offer</div>
-        <h2>Upgrade your drive.</h2>
-        <p>Get the premium RAVELOQ SeatGap Pro 2-piece set.</p>
+<div class="eyebrow">LAUNCH OFFER</div>
+<h2>Get Your RAVELOQ SeatGap Pro</h2>
 
-        <div class="price">
-          $24.99 <small> / 2-piece set</small>
-        </div>
+<div class="price">$24.99 <small>/ 2-piece set</small></div>
 
-        <a
-          href="mailto:orders@raveloq.com?subject=RAVELOQ%20SeatGap%20Pro%20Order"
-          class="btn btn-primary">
-          Order SeatGap Pro →
-        </a>
-      </div>
+<p>
+Order directly through WhatsApp for now.
+Shopify checkout can be connected later for automated payments and orders.
+</p>
 
-      <div style="font-size:80px;opacity:.15;font-weight:900;">
-        R
-      </div>
+<a
+class="btn red"
+href="https://wa.me/971500000000?text=Hi%20RAVELOQ%2C%20I%20want%20to%20order%20SeatGap%20Pro."
+target="_blank"
+rel="noopener">
+Order on WhatsApp
+</a>
 
-    </div>
+<div class="note">Temporary WhatsApp number — replace it with your real number before launch.</div>
 
-  </div>
+</div>
+</div>
 </section>
 
-<!-- FAQ -->
-<section id="faq">
-  <div class="container">
+<section id="faq" class="dark">
+<div class="container">
 
-    <div class="section-head">
-      <div class="small">FAQ</div>
-      <h2>Questions? We've got you.</h2>
-    </div>
+<div class="center">
+<div class="eyebrow">FAQ</div>
+<h2>Questions? We've got you.</h2>
+</div>
 
-    <div class="faq">
+<div class="faq-list">
 
-      <details>
-        <summary>Will SeatGap Pro fit my car?</summary>
-        <p>
-          SeatGap Pro is designed for a wide range of cars and SUVs.
-          Fit can vary depending on the space between your seat and center console.
-        </p>
-      </details>
+<details>
+<summary>What is SeatGap Pro?</summary>
+<p>SeatGap Pro is a car accessory designed to help prevent small everyday items from falling into the gap beside the seat.</p>
+</details>
 
-      <details>
-        <summary>Is installation difficult?</summary>
-        <p>
-          No. It is designed for quick installation without complicated tools.
-        </p>
-      </details>
+<details>
+<summary>Is it easy to install?</summary>
+<p>Yes. It is designed for simple positioning without a complicated installation process.</p>
+</details>
 
-      <details>
-        <summary>What comes in the package?</summary>
-        <p>
-          The premium set includes two SeatGap Pro organizers plus an
-          easy usage guide.
-        </p>
-      </details>
+<details>
+<summary>Will it fit my car?</summary>
+<p>Fit can vary depending on the vehicle and seat design. Check the product dimensions before ordering.</p>
+</details>
 
-      <details>
-        <summary>Can I use it on either side?</summary>
-        <p>
-          The two-piece set is designed to help organize both sides of
-          the front-seat area.
-        </p>
-      </details>
+<details>
+<summary>How do I order?</summary>
+<p>Use the WhatsApp order button above during the initial launch. Shopify checkout can be added later.</p>
+</details>
 
-    </div>
-  </div>
+<details>
+<summary>Can I return the product?</summary>
+<p>Return and refund terms should be published before the official store launch.</p>
+</details>
+
+</div>
+</div>
 </section>
 
-</main>
+<section class="contact">
+<div class="container">
+<div class="eyebrow">RAVELOQ</div>
+<h2>Make your drive a little easier.</h2>
+<p>
+Keep your essentials where they belong and give your car interior
+a cleaner, more organized feel.
+</p>
+<a href="#order" class="btn red">Get SeatGap Pro</a>
+</div>
+</section>
 
 <footer>
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div>
-        <div class="logo">RAVELO<span>Q</span></div>
-        <p class="footer-text">
-          Smart accessories for better everyday driving.
-          RAVELOQ SeatGap Pro keeps your car cleaner,
-          more organized and distraction-free.
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <a href="#features">Features</a>
-        <a href="#how">How It Works</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#faq">FAQ</a>
-      </div>
-
-    </div>
-
-    <div class="copyright">
-      © 2026 RAVELOQ. All rights reserved.
-    </div>
-
-  </div>
+<div class="container footer">
+<div>
+<div class="logo">RAVE<span>LOQ</span></div>
+<p>© 2026 RAVELOQ. All rights reserved.</p>
+</div>
+<p>SeatGap Pro • Built for everyday drivers</p>
+</div>
 </footer>
 
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
-  link.addEventListener('click',function(e){
-    const target=document.querySelector(this.getAttribute('href'));
-    if(target){
-      e.preventDefault();
-      target.scrollIntoView({
-        behavior:'smooth',
-        block:'start'
-      });
-    }
-  });
-});
-</script>
+<a
+class="wa"
+href="https://wa.me/971500000000?text=Hi%20RAVELOQ%2C%20I%20want%20to%20order%20SeatGap%20Pro."
+target="_blank"
+rel="noopener"
+aria-label="WhatsApp">
+☏
+</a>
 
 </body>
+</html>
